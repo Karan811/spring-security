@@ -1,4 +1,4 @@
-package com.akhianand.springrolejwt.model;
+package com.codecanvas.springrolejwt.model;
 
 public class UserDto {
     

@@ -1,4 +1,4 @@
-package com.akhianand.springrolejwt.config;
+package com.codecanvas.springrolejwt.config;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;

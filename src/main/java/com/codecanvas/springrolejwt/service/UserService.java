@@ -1,7 +1,7 @@
-package com.akhianand.springrolejwt.service;
+package com.codecanvas.springrolejwt.service;
 
-import com.akhianand.springrolejwt.model.User;
-import com.akhianand.springrolejwt.model.UserDto;
+import com.codecanvas.springrolejwt.model.User;
+import com.codecanvas.springrolejwt.model.UserDto;
 
 import java.util.List;
 

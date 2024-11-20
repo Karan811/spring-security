@@ -1,8 +1,8 @@
-package com.akhianand.springrolejwt.service.impl;
+package com.codecanvas.springrolejwt.service.impl;
 
-import com.akhianand.springrolejwt.dao.RoleDao;
-import com.akhianand.springrolejwt.model.Role;
-import com.akhianand.springrolejwt.service.RoleService;
+import com.codecanvas.springrolejwt.dao.RoleDao;
+import com.codecanvas.springrolejwt.model.Role;
+import com.codecanvas.springrolejwt.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

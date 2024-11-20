@@ -1,4 +1,4 @@
-package com.akhianand.springrolejwt.config;
+package com.codecanvas.springrolejwt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

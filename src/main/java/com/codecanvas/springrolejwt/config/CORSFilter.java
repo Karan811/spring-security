@@ -1,4 +1,4 @@
-package com.akhianand.springrolejwt.config;
+package com.codecanvas.springrolejwt.config;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;

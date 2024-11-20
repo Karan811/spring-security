@@ -1,4 +1,4 @@
-package com.akhianand.springrolejwt.model;
+package com.codecanvas.springrolejwt.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
