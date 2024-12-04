@@ -1,10 +1,8 @@
 package com.codecanvas.springrolejwt.controller;
 
 import com.codecanvas.springrolejwt.config.TokenProvider;
-import com.codecanvas.springrolejwt.model.AuthToken;
-import com.codecanvas.springrolejwt.model.LoginUser;
-import com.codecanvas.springrolejwt.model.User;
-import com.codecanvas.springrolejwt.model.UserDto;
+import com.codecanvas.springrolejwt.model.*;
+import com.codecanvas.springrolejwt.service.CacheService;
 import com.codecanvas.springrolejwt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +14,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+import java.util.Optional;
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -29,6 +29,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private  CacheService cacheService;
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> generateToken(@RequestBody LoginUser loginUser) throws AuthenticationException {
@@ -61,6 +64,13 @@ public class UserController {
     @RequestMapping(value="/userping", method = RequestMethod.GET)
     public String userPing(){
         return "Any User Can Read This";
+    }
+
+
+
+    @GetMapping("/{id}")
+    public Optional<User> getUser(@PathVariable Long id) {
+        return userService.findOne(id);
     }
 
 }
