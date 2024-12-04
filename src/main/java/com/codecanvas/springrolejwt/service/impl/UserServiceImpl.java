@@ -1,9 +1,7 @@
 package com.codecanvas.springrolejwt.service.impl;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 import com.codecanvas.springrolejwt.dao.UserDao;
 import com.codecanvas.springrolejwt.model.Role;
 import com.codecanvas.springrolejwt.model.User;
@@ -53,8 +51,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     }
 
     @Override
-    public User findOne(String username) {
-        return userDao.findByUsername(username);
+    public Optional<User> findOne(long id) {
+        return userDao.findById(id);
     }
 
     @Override

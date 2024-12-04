@@ -64,7 +64,6 @@ public class UserDto {
         user.setPassword(password);
         user.setEmail(email);
         user.setPhone(phone);
-        user.setName(name);
         user.setBusinessTitle(businessTitle);
         
         return user;

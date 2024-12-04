@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.Set;
 
+
 @Entity
+@Table(name = "user1")
 public class User {
 
     @Id
@@ -24,8 +26,7 @@ public class User {
     @Column
     private String phone;
 
-    @Column
-    private String name;
+
 
     @Column
     private String businessTitle;
@@ -79,13 +80,6 @@ public class User {
         this.phone = phone;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getBusinessTitle() {
         return businessTitle;
